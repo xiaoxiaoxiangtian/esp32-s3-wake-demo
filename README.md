@@ -13,6 +13,39 @@ ESP-IDF：5.5.x
 IDE: visual studio code + pioarduion plugin
 ```
 
+## 设备连线图
+### ESP32-S3 N16R8 board pinout
+
+>不同厂家主板GPIO口位置可能会不同，使用的时候需要注意
+
+<img src="image/引脚定义图2-高清.png" alt="alt text">
+
+### INMP441（I2S 麦克风）
+
+| INMP441 | ESP32-S3 GPIO | 说明 |
+|---------|---------------|------|
+| SCK     | GPIO 5        | I2S 位时钟 (BCK) |
+| WS      | GPIO 4        | I2S 左右声道时钟 (LRC) |
+| SD      | GPIO 6        | I2S 数据输入 (DIN) |
+| L/R     | GND           | 固定左声道 |
+| VDD     | 3.3V          | 电源 |
+| GND     | GND           | 地 |
+
+### ST7789（SPI TFT 显示屏，7 脚模块）
+
+| ST7789 模块 | ESP32-S3 GPIO | 说明           |
+|-------------|---------------|----------------|
+| VCC         | 3V3           | 电源           |
+| GND         | GND           | 地             |
+| SCL         | GPIO 21       | SPI 时钟       |
+| SDA         | GPIO 47       | SPI 数据 (MOSI) |
+| RES         | GPIO 45       | 复位           |
+| DC          | GPIO 40       | 数据/命令选择   |
+| BLK         | GPIO 42       | 背光控制        |
+| CS          | GPIO 41       | 片选(有就接，没有就不接) |
+
+---
+
 ## 预览效果
 ### 语音监听画面
 <img src="image/监听画面.jpeg" alt="alt text" style="width:400px;">
